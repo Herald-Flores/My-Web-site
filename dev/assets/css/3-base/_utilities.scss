@@ -1,0 +1,39 @@
+/* Custom Utilities -------------------- */
+
+
+// Type Utilities
+.text-black { color: $black; } 
+.text-orange{color: $primary}
+.text-white{color: #fff;}
+
+.bg-grey { background-color: #f4f4f4; }
+.bg-brand-grey{ background: $brand-grey;}
+.bg-blue{ background: $blue;}
+
+
+//boxshadow
+.boxshadow-orange{box-shadow: 0 2px 20px 5px rgba(188, 53, 21, 0.1);}
+
+// Background cover clas
+.bg-cover{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.bg-primary{
+    background-color: $brand-primary-color!important;
+}
+
+// Border Radius
+.border-radius{border-radius: .9rem;}
+.border-top-l-radius{border-top-left-radius: .9rem;}
+.border-top-r-radius{border-top-right-radius: .9rem;}
+.border-bottom-r-radius{border-bottom-right-radius: .9rem;}
+.border-bottom-l-radius{border-bottom-left-radius: .9rem;}
+
+// Z-index class
+.z-index-n1{z-index: -1!important;}
+.z-index-1{z-index: 1!important;}
+.z-index-2{z-index: 2!important;}
+.z-index-3{z-index: 3!important;}
