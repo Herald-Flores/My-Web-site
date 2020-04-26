@@ -42,24 +42,30 @@
 <body class="bg-white">
   <header>
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-primary">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-light">
   	<div class="container">
   		<a class="navbar-brand" href="#">
-  			<img src="/assets/img/logo-hf.svg" alt="Herald Flores">
+  			<img src="/assets/img/herald flores.png" alt="Herald Flores">
   		</a>
   		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-  			<span class="navbar-toggler-icon"></span>
+  			<span></span>
   		</button>
-  		<div class="collapse navbar-collapse ml-auto" id="navbarNavDropdown">
-  			<ul class="navbar-nav">
+  		<div class="collapse navbar-collapse ml-auto d-lg-flex justify-content-lg-end align-items-lg-center" id="navbarNavDropdown">
+  			<ul class="navbar-nav pt-4 mb-3 pt-lg-0 mb-lg-0 d-lg-flex justify-content-lg-end align-items-lg-center pr-lg-5">
   				<li class="nav-item active">
   					<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
   				</li>
   				<li class="nav-item">
-  					<a class="nav-link" href="#">Features</a>
+  					<a class="nav-link" href="#">About me</a>
   				</li>
   				<li class="nav-item">
-  					<a class="nav-link" href="#">Pricing</a>
+  					<a class="nav-link" href="#">Skills</a>
+  				</li>
+  				<li class="nav-item">
+  					<a class="nav-link" href="#">Works</a>
+  				</li>
+  				<li class="nav-item">
+  					<a class="nav-link" href="#">Contact</a>
   				</li>
   			</ul>
   		</div>
@@ -71,17 +77,51 @@
 <!-- Section header -->
 <section>
     <div class="container">
+        <!-- Section content -->
+        <div class="row">
+            <div class="col-12 order-1 order-md-2 col-md-6 text-center text-md-left ">
+                <div class="row h-100  no-gutters d-flex flex-wrap align-items-center">
+                    <div class="col-12">
+                        <h1 class="text-black">Desarrollar es parte mi ser.</span></h1>
+                        <p class="lead">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis repellendus recusandae molestiae eius ad dolorum harum unde sed! Explicabo minima odio enim maiores ea sequi laboriosam quos corrupti consequatur quia.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 order-3 col-md-6 contenedor-img position-relative">
+                <div class="row h-100  no-gutters d-flex flex-wrap align-items-center">
+                    <div class="bg-image-header border-radius bg-cover z-index-1" style="background-image: url(assets/img/hero/mesa-de-trabajo.png);"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
+<section class="container">
+    <div class="row">
+        <div class="col-12">
+            <h2>About me</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni incidunt tempore illum dignissimos adipisci mollitia aspernatur, itaque laboriosam in quis soluta dolor fugit nisi quod modi eaque quia ab voluptates?</p>
+        </div>
     </div>
 </section>
 
 
-        <footer class="py-4">
-            
+        <footer class="py-4 bg-primary">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center text-white">
+                        <p>Todos los derechos reservados. © Herald Flores, 2020. </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Back to top button -->
+            <a id="button"></a>
         </footer>
     
         <!-- build:js -->
-        <script src="assets/js/main.js"></script>
+        <script src="/assets/js/main.js"></script>
         <!-- endbuild -->
 
     </body>

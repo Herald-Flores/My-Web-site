@@ -1,23 +1,33 @@
 /* Typography Styles -------------------- */
 // Headings
 //
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+$roboto: 'Roboto', sans-serif;
+body{
+  font-family: 'Roboto', sans-serif;
+}
+
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: $headings-margin-bottom;
-  font-family: $headings-font-family;
+  font-family: $roboto;
   font-weight: $headings-font-weight;
   line-height: $headings-line-height;
-  color: $headings-color;
+  color: $brand-primary-color;
 }
 
 h1, .h1 { 
-    @include font-size($h1-font-size);
-    font-family: $hind;
-    font-size: 5rem;
-    line-height: 4.3rem;
+    font-family: $roboto;
+    font-size: 2.4rem;
+    line-height: 2.6rem;
+    color: $brand-primary-color;
 
-    color: $white;
+    @include media-breakpoint-up(lg){
+      font-size: 4rem;
+      line-height: 4.3rem;
+    }
 }
 
 h2, .h2 { @include font-size($h2-font-size); }
@@ -27,11 +37,12 @@ h5, .h5 { @include font-size($h5-font-size); }
 h6, .h6 { @include font-size($h6-font-size); }
 
 p {
-	font-family: $hind;
+	font-family: $roboto;
 	font-size: 18px;
 	font-weight: normal;
 	font-style: normal;
 	font-stretch: normal;
 	line-height: 1.25;
-	letter-spacing: normal;
+  letter-spacing: normal;
+  color: $brand-grey;
 }

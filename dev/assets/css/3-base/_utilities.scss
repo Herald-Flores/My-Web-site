@@ -1,16 +1,6 @@
 /* Custom Utilities -------------------- */
 
 
-// Type Utilities
-.text-black { color: $black; } 
-.text-orange{color: $primary}
-.text-white{color: #fff;}
-
-.bg-grey { background-color: #f4f4f4; }
-.bg-brand-grey{ background: $brand-grey;}
-.bg-blue{ background: $blue;}
-
-
 //boxshadow
 .boxshadow-orange{box-shadow: 0 2px 20px 5px rgba(188, 53, 21, 0.1);}
 
@@ -23,6 +13,13 @@
 
 .bg-primary{
     background-color: $brand-primary-color!important;
+}
+.bg-light{
+    background: $brand-light!important;
+}
+
+.text-gray{
+    color: $brand-grey;
 }
 
 // Border Radius

@@ -1,5 +1,156 @@
+.navbar-expand-lg{
+    min-height: 85px;
+    display: flex;
+    align-items: center;
+    @include media-breakpoint-up(lg){
+        height: 85px;
+    }
+    .container{
+        display: flex;
+        align-items: center;
+        //flex-wrap: wrap;
+    }
+    .navbar-collapse.show{
+        height: 100vh;
+        background: $brand-light;
+        z-index: 5;
+    }
+}
 .navbar-brand{
+    width: 55px;
+    margin-left: 1rem;
+    @include media-breakpoint-up(lg){
+        width: 65px;
+        margin-left: 0;
+    }
     img{
-        width: 55px;
+        width: 100%;
+    }
+}
+.navbar-expand-lg{
+    display: flex;
+    align-items: center;
+    height: 85px;
+    .container{
+        height: 100%;
+    }
+    .menu-home-menu-container{
+        height: 100%;
+    }
+    .main-menu{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    li{
+        list-style: none;
+        @include media-breakpoint-down(md){
+            margin-bottom: 1rem;
+        }
+        .nav-link {
+            display: flex;
+            justify-content: center;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 900;
+            opacity: 0.7;
+        }
+    }
+}
+
+.navbar-toggler {
+    border: none;
+    position: absolute;
+    right: 1rem;
+    top: .88rem;
+    z-index: 5;
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+	span {
+        content: "";
+        display: block;
+        position: absolute;
+        height: 2px;
+        transform-origin: 50% 50%;
+        transition: background-color 0.2s ease-in-out, top 0.2s 0.2s ease-out,  transform 0.2s linear;
+        width: 22px;
+        background-color: $blue;
+        &:before, &:after {
+            background-color: $blue;
+            content: "";
+            display: block;
+            height: 2px;
+            position: absolute;
+            transform-origin: 50% 50%;
+            transition: background-color 0.2s ease-in-out, top 0.2s 0.2s ease-out,  transform 0.2s linear;
+            width: 22px;
+        }
+
+		&:before {
+			top: 7px;
+		}
+
+		&:after {
+			top: -7px;
+		}
+	}
+
+	&.active {
+		span {
+			background-color: transparent;
+            &:before, &:after {
+				transition: top 0.2s ease-out, transform 0.2s 0.2s ease-out;
+			}
+
+			&:before {
+				top: 0;
+				transform: rotate3d(0, 0, 1, -45deg);
+			}
+
+			&:after {
+				top: 0;
+				transform: rotate3d(0, 0, 1, 45deg);
+			}
+		}
+	}
+}
+
+.not-scroll {
+    overflow: hidden !important;
+}
+
+
+.navbar-dark .navbar-nav .nav-link{
+    color: $brand-grey;
+    padding: .4rem 1.5rem;
+    
+    &:hover, &:focus{
+        color: $brand-second;
+    }
+}
+
+.navbar-dark .navbar-nav .show > .nav-link,
+.navbar-dark .navbar-nav .active > .nav-link,
+.navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .nav-link.active {
+    color: $brand-second;
+    position: relative;
+    &::after{
+        content: "";
+        border-top: 3px solid $brand-primary-color;
+        display: block;  
+        width:8%;   
+        @include media-breakpoint-up(lg){
+            width: 45%;
+        }   
+        height: 12px;
+        border-radius: 1px;
+        position: absolute;
+        left: auto;
+        bottom: -6px;
+        border-radius: 2px;
+        z-index:0;
     }
 }

@@ -36,6 +36,12 @@ function error(message) {
     }
 }
 
+$('.navbar-toggler').click(function () {
+    $(this).toggleClass('active');
+    $('.collapse').toggleClass('show');
+    $('html, body').toggleClass('not-scroll');
+});
+
 // World countries array 
 // { name, topLevelDomain, alpha2Code, alpha3Code, callingCodes, capital, altSpellings, region, subregion
 // population, latlng, demonym, area, gini, timezones, borders, nativeName, numericCode, currencies, languages

@@ -99,7 +99,8 @@ function jsConcat() {
 	//jsLibs();
 	return src([
 		'dev/assets/js/imports.js',
-		'dev/assets/js/swiper.js',
+		// 'dev/assets/js/validation-form.js',
+		// 'dev/assets/js/swiper.js',
 		'dev/assets/js/functions.js'
 	])
 	.pipe(maps.init())

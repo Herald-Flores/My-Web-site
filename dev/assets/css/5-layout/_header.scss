@@ -46,26 +46,10 @@
         width: 45%;
     }
     .contenedor-img{
-        min-height: 620px;
+        min-height: 520px;
     }
     .bg-image-header{
-        width: 99%;
-        min-height: 780px;
-    }
-}
-@include media-breakpoint-up(xl) {
-    .contenedor-img{
-        min-height: 620px;
-    }
-    .bg-image-header{
-        width: 103%;
-        min-height: 780px;
-        margin-left: 2rem;
-    }
-}
-
-@media screen and (min-width: 1450px){
-    .bg-image-header{
-        width: 125%;
+        width: 100%;
+        min-height: 460px;
     }
 }
