@@ -6,9 +6,9 @@ module.exports = {
     "loc":"Estelí Nicaragua"
   },
   "social":{
-    "facebook":"",
-    "linkedin":"",
-    "instagram":"",
+    "facebook":"https://www.facebook.com/heraldflores",
+    "linkedin":"https://www.linkedin.com/in/herald-flores95/",
+    "instagram":"https://www.instagram.com/heraldflores95/",
     "youtube":""
   },
   "apps":{
