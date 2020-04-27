@@ -42,6 +42,14 @@ $('.navbar-toggler').click(function () {
     $(this).toggleClass('active');
     $('.collapse').toggleClass('show');
     $('html, body').toggleClass('not-scroll');
+
+    var btns = header.getElementsByClassName("nav-item");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function() {
+            $('html, body').removeClass('not-scroll');
+            $('.collapse').removeClass('show');
+        });
+    }
 });
 
 var header = document.getElementById("navbarNavDropdown");
@@ -119,7 +127,44 @@ ScrollReveal().reveal('.sreveal-hero', {
 })
 
 
+//Check if browser is IE
+var ie= "";
+if (navigator.userAgent.search("MSIE") >= 0) {
+    ie ="IE11";
+}
+var timescroll;
 
+$('a[href*="#"]')
+    .not('[href="#"]')
+    .not('[href="#0"]')
+    .click(function(event) {
+        if(!$(this).hasClass('no-animate')){
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+        if (target.length) {
+            event.preventDefault();
+                if(ie === "IE11"){
+                    timescroll= 1800;
+                }else{
+                    timescroll= 1300;
+                }
+                $('html, body').animate({
+                    scrollTop: target.offset().top-50
+                }, timescroll, function() {
+                var $target = $(target);
+                $target.focus();
+                if ($target.is(":focus")) {
+                    return false;
+                } else {
+                    $target.attr('tabindex','-1'); 
+                    $target.focus(); 
+                };
+            });
+        }
+            }
+        }
+});
 
 // World countries array 
 // { name, topLevelDomain, alpha2Code, alpha3Code, callingCodes, capital, altSpellings, region, subregion

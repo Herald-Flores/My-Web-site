@@ -20,7 +20,7 @@ if (breakpoint === 'lg' || breakpoint === 'xl') {
     log('sm , md');
 }
 
-var btn = $('#button');
+var btn = $('#backtop');
 
 $(window).scroll(function() {
 	if ($(window).scrollTop() > 300) {

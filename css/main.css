@@ -10823,6 +10823,36 @@ body:before {
   .progress {
     margin-bottom: 20px; } }
 
+#backtop {
+  display: flex;
+  background-color: #c2243e;
+  color: #faf8f0;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  transition: background-color .3s,  opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+  font-size: 26px; }
+
+#backtop:hover {
+  cursor: pointer;
+  background-color: #142449; }
+
+#backtop:active {
+  background-color: #142449; }
+
+#backtop.show {
+  opacity: 1;
+  visibility: visible; }
+
 .portafolio {
   display: none;
   height: 360px;
