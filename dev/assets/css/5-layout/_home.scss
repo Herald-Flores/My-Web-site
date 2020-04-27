@@ -1,0 +1,38 @@
+#about-me{
+    position: relative;
+    &:before{
+        content: '';
+        width: 55px;
+        height: 55px;
+        background:$brand-light;
+        border-radius: 100% 0% 0% 100% / 0% 30% 70% 100%;
+        display: inline-block; 
+        margin-left: .4rem; 
+        position: absolute;
+        top: 0;
+        right: 0;
+        @include media-breakpoint-up(lg){
+            width: 120px;
+            height: 120px;
+        }
+    }
+    &:after{
+        content: '';
+        width: 55px;
+        height: 55px;
+        background:$brand-light;
+        border-radius: 0% 100% 0% 100% / 100% 100% 0% 0%;
+        display: inline-block; 
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index:0;
+        @include media-breakpoint-up(lg){
+            width: 120px;
+            height: 120px;
+        }
+    }
+}
+.image-cover{
+    object-fit: cover;
+}

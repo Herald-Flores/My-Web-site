@@ -17,17 +17,17 @@
 .bg-light{
     background: $brand-light!important;
 }
+.bg-secondary{
+    background: $brand-second!important;
+}
 
 .text-gray{
     color: $brand-grey;
 }
+.text-secondary{
+    color: $brand-second!important;
+}
 
-// Border Radius
-.border-radius{border-radius: .9rem;}
-.border-top-l-radius{border-top-left-radius: .9rem;}
-.border-top-r-radius{border-top-right-radius: .9rem;}
-.border-bottom-r-radius{border-bottom-right-radius: .9rem;}
-.border-bottom-l-radius{border-bottom-left-radius: .9rem;}
 
 // Z-index class
 .z-index-n1{z-index: -1!important;}

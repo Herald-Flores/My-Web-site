@@ -5,17 +5,28 @@
 
 $roboto: 'Roboto', sans-serif;
 body{
-  font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
-  margin-bottom: $headings-margin-bottom;
-  font-family: $roboto;
-  font-weight: $headings-font-weight;
-  line-height: $headings-line-height;
-  color: $brand-primary-color;
+h1, h2,.h1, .h2 {
+    margin-bottom: $headings-margin-bottom;
+    font-family: $roboto;
+    font-weight: $headings-font-weight;
+    line-height: $headings-line-height;
+    color: $brand-primary-color;
+
+    &:after{
+        content: '';
+        width: 15px;
+        height: 15px;
+        background:#faf8f0;
+        border-radius: 100% 0% 0% 100% / 0% 30% 70% 100%;
+        display: inline-block; 
+        margin-left: .4rem; 
+        border: 3px solid $brand-primary-color;
+
+    }
 }
 
 h1, .h1 { 
@@ -25,8 +36,18 @@ h1, .h1 {
     color: $brand-primary-color;
 
     @include media-breakpoint-up(lg){
-      font-size: 4rem;
-      line-height: 4.3rem;
+        font-size: 4rem;
+        line-height: 4.3rem;
+    }
+}
+h1.text-white, h2.text-white, .h1.text-white, .h2.text-white{
+    &:after{
+        background:transparent;
+        border-radius: 100% 0% 0% 100% / 0% 30% 70% 100%;
+        display: inline-block; 
+        margin-left: .4rem; 
+        border: 3px solid $brand-light;
+
     }
 }
 
@@ -43,6 +64,6 @@ p {
 	font-style: normal;
 	font-stretch: normal;
 	line-height: 1.25;
-  letter-spacing: normal;
-  color: $brand-grey;
+    letter-spacing: normal;
+    color: $brand-grey;
 }

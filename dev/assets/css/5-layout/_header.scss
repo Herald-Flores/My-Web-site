@@ -11,11 +11,17 @@
     min-height: 340px;
 }
 .bg-image-header{
-    position: absolute;
     width: 100%;
-    top: 3rem;
+    top: 1rem;
     left: 0;
-    min-height: 464px;
+    min-height: 266px;
+    position: absolute;
+    @include media-breakpoint-up(lg){
+        width: 100%;
+        top: 3rem;
+        left: 0;
+        min-height: 464px;
+    }
 }
 
 
