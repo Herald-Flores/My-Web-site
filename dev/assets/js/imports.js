@@ -11,6 +11,8 @@ import Swiper from 'swiper';
 let owl_carousel = require('owl.carousel');
 window.fn = owl_carousel;
 
+const ScrollReveal = require('scrollreveal')
+
 // FALSE in production.
 const debug = true;
 
@@ -54,34 +56,67 @@ for (var i = 0; i < btns.length; i++) {
 
 
 
-//progress bard
+//Scoll Reveal & CountUp
+let srDelay = 200;
+let srDuration = 2000;
+ScrollReveal().reveal('.sreveal-3ms', {
+    origin: 'bottom',
+    distance: '10px',
+    delay: 300,
+    duration: srDuration,
+    ease: 'ease',
+    viewFactor: .1,
+    mobile: false,
+    //reset: true
+})
 
-
-function animateElements() {
-    $('.progressbar').each(function () {
-        var elementPos = $(this).offset().top;
-        var topOfWindow = $(window).scrollTop();
-        var percent = $(this).find('.circle').attr('data-percent');
-        var animate = $(this).data('animate');
-        if (elementPos < topOfWindow + $(window).height() - 30 && !animate) {
-            $(this).data('animate', true);
-            $(this).find('.circle').circleProgress({
-                // startAngle: -Math.PI / 2,
-                value: percent / 100,
-                size : 400,
-                thickness: 15,
-                fill: {
-                    color: '#663399'
-                }
-            }).on('circle-animation-progress', function (event, progress, stepValue) {
-                $(this).find('strong').text((stepValue*100).toFixed(0) + "%");
-            }).stop();
-        }
-    });
-}
-
-animateElements();
-$(window).scroll(animateElements);
+let srDelay1s = 200;
+let srDuration1s = 2000;
+ScrollReveal().reveal('.sreveal-1s', {
+    origin: 'bottom',
+    distance: '15px',
+    delay: 1000,
+    duration: srDuration,
+    ease: 'ease',
+    viewFactor: .1,
+    mobile: false,
+    //reset: true
+})
+/*
+* From Left to right
+*/
+ScrollReveal().reveal('.sreveal-lr', {
+    origin: 'left',
+    distance: '15px',
+    delay: srDelay,
+    duration: srDuration,
+    ease: 'ease',
+    viewFactor: .1,
+    mobile: false,
+    //reset: true
+})
+/*
+* From Left to right
+*/
+ScrollReveal().reveal('.sreveal-rl', {
+    origin: 'right',
+    distance: '15px',
+    delay: srDelay,
+    duration: srDuration,
+    ease: 'ease',
+    viewFactor: .1,
+    mobile: false,
+    //reset: true
+})
+ScrollReveal().reveal('.sreveal-hero', {
+    origin: 'bottom',
+    distance: '70px',
+    delay: srDelay,
+    duration: srDuration,
+    ease: 'ease',
+    mobile: true,
+    reset: true
+})
 
 
 

@@ -57,6 +57,7 @@
     "paroller.js": "^1.4.6",
     "popper.js": "^1.16.1",
     "swiper": "^4.5.1",
+    "scrollreveal": "^4.0.5",
     "wow.js": "^1.2.2"
   }
 }
