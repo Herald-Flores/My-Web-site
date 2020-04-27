@@ -75,10 +75,15 @@
     cursor: pointer;
     width: 30px;
     height: 25px;
+    outline: none;
+    &:focus{
+        outline: none;
+    }
 	span {
         content: "";
         display: block;
         position: absolute;
+        outline: none;
         height: 2px;
         transform-origin: 50% 50%;
         transition: background-color 0.2s ease-in-out, top 0.2s 0.2s ease-out,  transform 0.2s linear;
